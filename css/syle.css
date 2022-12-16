@@ -883,4 +883,128 @@
         opacity: 0.6;
     }
     /**** Services style end   *****/
+    /********* <!-- Hero events start --> *******/
+    
+    .events {
+        padding: 90px 0px 88px 0px;
+        background-image: url(../images/3ddogbg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .events__info {
+        margin-left: 250px;
+        position: relative;
+    }
+    
+    .events__info::after {
+        content: "";
+        width: 613px;
+        height: 481px;
+        top: -218px;
+        right: -150px;
+        background-image: url(../images/3ddog.png);
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+    
+    .events__title {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        color: var(--white-bg-color);
+        margin-bottom: 32px;
+    }
+    
+    .events__form {
+        display: flex;
+        align-items: center;
+    }
+    
+    .events__input {
+        width: 355px;
+        padding: 18px 22px 12px 22px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        margin-right: 21px;
+        border: 2px solid transparent;
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--main-text-color);
+        transition: all 0.2s ease;
+    }
+    
+    .events__input::placeholder {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        color: #949494;
+    }
+    
+    .events__input:focus {
+        border: 2px solid transparent;
+    }
+    /*     
+    .events__input:invalid (:focus) {
+        border-color: #DC4D41;
+        color: #DC4D41;
+        animation-name: error;
+        animation-duration: 1s;
+    } */
+    
+    .events__input:not(:focus):invalid:not(:placeholder-shown) {
+        border: 2px solid #ff0000;
+        animation-name: error;
+        animation-duration: 0.3s;
+    }
+    
+    .events__input:not(focus):valid:not(:placeholder-shown) {
+        border: 2px solid #008000;
+    }
+    
+    @keyframes error {
+        50% {
+            transform: translate(-50px) translateX(50px) translateX(-50px);
+        }
+        100% {
+            transform: translateX(10px) translateX(50px) translateX(-50px);
+        }
+    }
+    
+    .events__button {
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: var(--white-bg-color);
+        border: 3px solid transparent;
+        padding: 15px 52px 15px 52px;
+        background-color: var(--main-bg-color);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .events__button:hover {
+        color: var(--main-text-color);
+        background-color: var(--ellow-hover-color);
+    }
+    
+    .events__button:focus {
+        transform: scale(0.9);
+        transition: 0.5s ease;
+    }
+    /********* <!-- Hero events end --> *******/
     /************ Main style end ***********/
