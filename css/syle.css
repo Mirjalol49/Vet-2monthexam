@@ -1,0 +1,387 @@
+    @font-face {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 300;
+        src: local(''), url('../fonts/FuturaPT-light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/FuturaPT-Light.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    @font-face {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 500;
+        src: local(''), url('../fonts/FuturaPT-Medium.woff') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/FuturaPT-Medium.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    @font-face {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 300;
+        src: local(''), url('../fonts/FuturaPT-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/FuturaPT-Bold.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* VARIABLES */
+    
+     :root {
+        --main-text-color: #333333;
+        --main-bg-color: #333333;
+        --ellow-hover-color: #FFBD54;
+        --ellow-bg-color: #FFBD54;
+        --white-bg-color: #ffff;
+        --main-font-size: 18px;
+        --main-font-weight: 400;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    /* GENERAL */
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    html {
+        height: 100%;
+        box-sizing: border-box;
+    }
+    
+    img {
+        display: block;
+        height: auto;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "FuturaPT", 'Arial', 'sans-serif';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: var(--main-line-height);
+        background-color: #f9f9f9;
+        overflow-x: hidden;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+    /* VISUALLY-HIDDEN */
+    
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    /* CONTAINER */
+    
+    .container {
+        max-width: 1263px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    /* STICKY-FOOTER */
+    
+    .site-main {
+        flex-grow: 1;
+        background-image: url(../images/bg.png);
+        background-repeat: repeat;
+    }
+    /************ Header style start ***********/
+    
+    .site-header__top {
+        padding: 12px 0px 9px 0px;
+    }
+    
+    .top__list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        padding-left: none;
+    }
+    
+    .top__item {
+        margin-right: 120px;
+    }
+    
+    .top__item:nth-child(3) {
+        position: relative;
+    }
+    
+    .top__item:nth-child(3)::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        top: 4px;
+        left: -21px;
+        background-image: url(../images/date.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+    
+    .top__item:last-child {
+        margin-right: 0;
+    }
+    
+    .top__time {
+        margin-right: 17px;
+    }
+    
+    .top__time:last-child {
+        margin-right: 0;
+    }
+    
+    .address__link {
+        text-decoration: none;
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        color: var(--main-text-color);
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .address__link::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        top: 2px;
+        left: -21px;
+        background-image: url(../images/home.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+    
+    .address__link:hover {
+        color: var(--ellow-hover-color);
+    }
+    
+    .address__link:active {
+        color: var(--main-text-color);
+        opacity: 0.6;
+    }
+    
+    .phone__list {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .phone__list::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        top: 4px;
+        left: -21px;
+        background-image: url(../images/call.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+    
+    .phone__item {
+        margin-right: 22px;
+    }
+    
+    .phone__item:nth-child(2) {
+        position: relative;
+    }
+    
+    .phone__item:nth-child(2)::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        top: 8px;
+        left: -12px;
+        background-color: #FFBD54;
+        border-radius: 50%;
+        position: absolute;
+    }
+    
+    .phone__item:nth-child(2)::after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        top: 8px;
+        right: -12px;
+        background-color: #FFBD54;
+        border-radius: 50%;
+        position: absolute;
+    }
+    
+    .phone__item:last-child {
+        margin-right: 0;
+    }
+    
+    .phone__link {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--main-text-color);
+        transition: all 0.3s ease;
+    }
+    
+    .phone__link:hover {
+        color: var(--ellow-hover-color);
+    }
+    
+    .phone__link:active {
+        color: var(--main-text-color);
+        opacity: 0.6;
+    }
+    /* site-header__bottom */
+    
+    .site-header__bottom {
+        padding: 20px 0px;
+        background-color: var(--white-bg-color);
+    }
+    
+    .down__inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+    
+    .down__img {
+        position: absolute;
+        top: -37px;
+        left: -115px;
+        transition: all 0.2s ease;
+    }
+    
+    .down__img:hover {
+        opacity: 0.8;
+    }
+    
+    .down__img:active {
+        opacity: 0.6;
+    }
+    
+    .down__nav {
+        margin-right: 195px;
+    }
+    
+    .menu__list {
+        width: 710px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-wrap: wrap;
+    }
+    
+    .menu__item {
+        margin-right: 55px;
+    }
+    
+    .menu__item::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        top: 3px;
+        left: -26px;
+        background-image: url(../images/fish.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+    
+    .menu__item:last-child {
+        margin-right: 0;
+    }
+    
+    .menu__link {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        border-bottom: 3px solid transparent;
+        color: var(--main-text-color);
+        transition: all 0.3s ease;
+    }
+    
+    .menu__link:hover {
+        border-color: #F4FFAD;
+    }
+    
+    .menu__link:active {
+        opacity: 0.6;
+    }
+    
+    .down__link {
+        font-family: 'FuturaPT';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: right;
+        color: var(--main-text-color);
+        position: relative;
+        border: none;
+        background-color: transparent;
+        padding: 0px;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .down__link:hover {
+        border-color: #F4FFAD;
+    }
+    
+    .down__link:active {
+        opacity: 0.6;
+    }
+    
+    .down__link::before {
+        content: "";
+        width: 23px;
+        height: 21px;
+        top: 0px;
+        left: -28px;
+        background-image: url(../images/paw.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+    /************ Header style end ***********/
