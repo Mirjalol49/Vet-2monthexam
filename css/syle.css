@@ -50,6 +50,7 @@
     html {
         height: 100%;
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
     
     img {
@@ -128,7 +129,7 @@
         align-items: center;
         justify-content: flex-end;
         list-style: none;
-        padding-left: none;
+        padding-left: 0;
     }
     
     .top__item {
@@ -741,6 +742,7 @@
         justify-content: center;
         align-items: center;
         transition: all 0.3s ease;
+        margin-right: 30px;
     }
     
     .our-services__button:hover {
@@ -763,13 +765,13 @@
     .our-services__button--left {
         position: absolute;
         top: 85px;
-        left: -42px;
+        left: -50px;
     }
     
     .our-services__button--right {
         position: absolute;
         top: 85px;
-        right: -42px;
+        right: -80px;
     }
     
     .services__down {
@@ -1007,7 +1009,7 @@
     }
     
     .article__title {
-        font-family: 'Futura PT';
+        font-family: 'FuturaPT';
         font-style: normal;
         font-weight: 700;
         font-size: 48px;
@@ -1231,10 +1233,18 @@
         margin-right: 166px;
     }
     
+    .noon {
+        /* padding-top: 2.7px; */
+        width: 462px;
+        height: 735px;
+        margin-right: 166px;
+    }
+    
     .connection__map {
         margin-top: 3px;
         width: 462px;
-        height: 726px;
+        height: 652px;
+        margin-right: auto;
     }
     
     .connection__right {
